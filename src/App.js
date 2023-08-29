@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { TwCard } from './card.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const users = [
+    {userName :"CruzCafune",
+    name:"cruzi",
+    isFollowing:true
+},
+{userName :"VastySSJ",
+name:"Vasty",
+isFollowing:false
+},
+{userName :"asan_yf",
+name:"Asan",
+isFollowing:true
 }
+]
 
-export default App;
+export function App () {
+    return (
+      <section className='App'>
+      <span className='maybe'>Tal vez te guste</span>
+      {users.map(({userName,name,isFollowing}) => 
+        <TwCard 
+            key={userName}
+            username={userName}
+            initialIsFollowing={isFollowing}
+        >
+            {name}
+        </TwCard>
+      )}
+      </section>
+    )
+}

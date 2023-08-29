@@ -1,0 +1,17 @@
+[
+    {
+        "userName": "CruzCafune",
+        "name": "cruzi",
+        "isFollowing": true
+    },
+    {
+        "userName": "VastySSJ",
+        "name": "Vasty",
+        "isFollowing": false
+    },
+    {
+        "userName": "asan_yf",
+        "name": "Asan",
+        "isFollowing": true
+    }
+]
